@@ -23,7 +23,7 @@ public class BankMainPageTest {
     }
 
     @Test
-    public void testSearch() {
+    public void navigateToBankPageAndCheckValidCurrency() {
         open("https://www.google.com");
         new GoogleSearchPage().search("Открытие");
         GoogleResultPage resultPage = new GoogleResultPage();
