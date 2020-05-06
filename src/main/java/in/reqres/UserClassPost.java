@@ -1,3 +1,5 @@
+package in.reqres;
+
 public class UserClassPost {
     private int id;
     private String email;

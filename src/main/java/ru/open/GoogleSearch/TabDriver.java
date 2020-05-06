@@ -1,3 +1,5 @@
+package ru.open.GoogleSearch;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

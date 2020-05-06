@@ -1,3 +1,5 @@
+package ru.open;
+
 import com.codeborne.selenide.Browsers;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
@@ -5,6 +7,11 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import ru.open.GoogleSearch.BankMainPage;
+import ru.open.GoogleSearch.GoogleResultPage;
+import ru.open.GoogleSearch.GoogleSearchPage;
+import ru.open.GoogleSearch.TabDriver;
+
 
 import static com.codeborne.selenide.Selenide.open;
 

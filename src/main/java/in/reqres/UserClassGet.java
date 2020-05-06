@@ -1,3 +1,5 @@
+package in.reqres;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
@@ -5,11 +7,10 @@ import java.util.List;
 public class UserClassGet {
 
     private int page;
-    @JsonProperty("per_page")
-    private int perPage;
+
+    private int per_page;
     private int total;
-    @JsonProperty("total_pages")
-    private int totalPages;
+    private int total_pages;
     @JsonProperty("data")
     private List<Data> arrayList;
     @JsonProperty("ad")
@@ -27,11 +28,11 @@ public class UserClassGet {
 
     }
 
-    public UserClassGet(int page, int perPage, int total, int totalPages, List<Data> arrayList, Ad ad) {
+    public UserClassGet(int page, int per_page, int total, int total_pages, List<Data> arrayList, Ad ad) {
         this.page = page;
-        this.perPage = perPage;
+        this.per_page = per_page;
         this.total = total;
-        this.totalPages = totalPages;
+        this.total_pages = total_pages;
         this.arrayList = arrayList;
         this.ad = ad;
     }
@@ -53,11 +54,11 @@ public class UserClassGet {
     }
 
     public int getPer_page() {
-        return perPage;
+        return per_page;
     }
 
     public void setPer_page(int perPage) {
-        this.perPage = perPage;
+        this.per_page = perPage;
     }
 
     public int getTotal() {
@@ -68,19 +69,18 @@ public class UserClassGet {
         this.total = total;
     }
 
-    public int getTotalPages() {
-        return totalPages;
+    public int getTotal_pages() {
+        return total_pages;
     }
 
-    public void setTotalPages(int totalPages) {
-        this.totalPages = totalPages;
+    public void setTotal_pages(int total_pages) {
+        this.total_pages = total_pages;
     }
 
 
     static class Data {
         private int id;
         private String email;
-
         private String first_name;
         private String last_name;
         private String avatar;
@@ -88,24 +88,20 @@ public class UserClassGet {
         public Data() {
         }
 
-        public Data(int id, String email, String firstName, String lastName, String avatar) {
+        public Data(int id, String email, String first_name, String last_name, String avatar) {
             this.id = id;
             this.email = email;
-            this.first_name = firstName;
-            this.last_name = lastName;
+            this.first_name = first_name;
+            this.last_name = last_name;
             this.avatar = avatar;
-        }
-
-        public String getFirstName() {
-            return first_name;
-        }
-
-        public void setFirstName(String firstName) {
-            this.first_name = firstName;
         }
 
         public int getId() {
             return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
         }
 
         public String getEmail() {
@@ -116,7 +112,15 @@ public class UserClassGet {
             this.email = email;
         }
 
-        public String getLastName() {
+        public String getFirst_name() {
+            return first_name;
+        }
+
+        public void setFirst_name(String first_name) {
+            this.first_name = first_name;
+        }
+
+        public String getLast_name() {
             return last_name;
         }
 
@@ -130,10 +134,6 @@ public class UserClassGet {
 
         public void setAvatar(String avatar) {
             this.avatar = avatar;
-        }
-
-        public void setId(int id) {
-            this.id = id;
         }
     }
 
@@ -179,11 +179,11 @@ public class UserClassGet {
 
     @Override
     public String toString() {
-        return "UserClass{" +
+        return "UserClassGet{" +
                 "page=" + page +
-                ", per_page=" + perPage +
+                ", per_page=" + per_page +
                 ", total=" + total +
-                ", total_pages=" + totalPages +
+                ", total_pages=" + total_pages +
                 ", arrayList=" + arrayList +
                 ", ad=" + ad +
                 '}';
